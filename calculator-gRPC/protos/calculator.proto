@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package calculator;
+
+// The Calculator service definition.
+service Calculator {
+  // RPC method for adding two numbers.
+  rpc Add (ArithmeticRequest) returns (ArithmeticResponse);
+
+    // RPC method for Multiply two numbers.
+  rpc Multiply (ArithmeticRequest) returns (ArithmeticResponse);
+
+   // rpc method for substraction
+   rpc Subtract (ArithmeticRequest) returns (ArithmeticResponse);
+}
+
+/////// Add messages
+// The request message containing the numbers to add.
+message ArithmeticRequest {
+	int32 num1 = 1;
+	int32 num2 = 2;
+}
+
+message ArithmeticResponse {
+	int32 result = 1;
+}
+
+
+
+
+
+
+// to generate the message and service classes files
+// in terminal: python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. calculator.proto

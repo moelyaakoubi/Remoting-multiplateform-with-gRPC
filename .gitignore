@@ -1,0 +1,19 @@
+my-env/
+ISC-TNI-gRPC/
+
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environment
+my-env/
+.venv/
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+
+# Ignore configuration files
+*.env
